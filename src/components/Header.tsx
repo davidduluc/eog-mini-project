@@ -11,6 +11,7 @@ const useStyles = makeStyles({
   },
 });
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default () => {
   const classes = useStyles();
 
