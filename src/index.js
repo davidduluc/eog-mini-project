@@ -7,13 +7,10 @@ import {
   InMemoryCache,
   split,
   HttpLink,
-  // useSubscription,
 } from '@apollo/client';
 import { getMainDefinition } from '@apollo/client/utilities';
 import { WebSocketLink } from '@apollo/client/link/ws';
 import App from './App';
-
-// const store = createStore(rootReducer)
 
 const httpLink = new HttpLink({
   uri: 'https://react.eogresources.com/graphql',
@@ -45,7 +42,6 @@ const client = new ApolloClient({
 });
 
 ReactDOM.render(
-  // <Provider store={store}>
   <ApolloProvider client={client}>
     <App />
   </ApolloProvider>,

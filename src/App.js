@@ -66,7 +66,6 @@ const App = () => {
   const handleChange = (e) => {
     const metricName = e.target.name;
     if (selectedMetrics[metricName]) {
-      // alert("hu")
       // eslint-disable-next-line max-len
       setSelectedMetrics({ ...selectedMetrics, [metricName]: { checked: !selectedMetrics[metricName].checked } });
     } else {
