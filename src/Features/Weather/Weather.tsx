@@ -1,11 +1,5 @@
 import React, { FC } from 'react';
-import {
-  ApolloClient,
-  ApolloProvider,
-  useQuery,
-  gql,
-  InMemoryCache,
-} from '@apollo/client';
+import { ApolloClient, ApolloProvider, useQuery, gql, InMemoryCache } from '@apollo/client';
 import { useGeolocation } from 'react-use';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import { Typography } from '@material-ui/core';
@@ -58,6 +52,7 @@ const Weather: FC = () => {
   return <Chip label={`Weather in ${locationName}: ${description} and ${Math.round(toF(temperatureinCelsius))}°`} />;
 };
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default () => (
   <ApolloProvider client={client}>
     <Weather />
